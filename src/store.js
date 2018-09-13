@@ -24,24 +24,23 @@ export default new Vuex.Store({
     ],
     todos: [
       {
-        text:
-          'Terminar los filtros de "all", "active" y "completed" de forma dinamica.',
+        text: 'Comprarle Royal Canin a Wilson 🐈',
         completed: false,
       },
       {
-        text: 'Agregar soporte para local storage',
+        text: 'Matear con Nelsito en el auto ❤️',
         completed: true,
       },
       {
-        text: 'Pasarle a Leo el esquema de datos y un link de navegacion',
+        text: 'Pagar deudas',
         completed: false,
       },
       {
-        text: 'Integrarlo con Firebase',
-        completed: false,
+        text: 'Conseguir un unicornio 🦄',
+        completed: true,
       },
       {
-        text: 'Get an unicorn 🦄',
+        text: 'Cabalgar en unicornio 🦄 hacia la libertad',
         completed: false,
       },
     ],
