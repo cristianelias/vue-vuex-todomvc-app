@@ -21,7 +21,7 @@
 
 <script>
 import Todo from './Todo'
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'TodoList',
@@ -37,9 +37,7 @@ export default {
     },
   },
   computed: {
-    filteredTodos() {
-      return this.$store.getters.filteredTodos
-    },
+    ...mapGetters(['filteredTodos']),
   },
 }
 </script>

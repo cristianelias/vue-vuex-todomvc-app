@@ -7,7 +7,7 @@
 
     <!-- This footer should hidden by default and shown when there are todos -->
     <TodoFilters
-      v-show="todosCount > 0" />
+      v-show="allTodos.length > 0" />
   </section>
 </template>
 
@@ -15,6 +15,7 @@
 import AddTodo from './AddTodo'
 import TodoList from './TodoList'
 import TodoFilters from './TodoFilters'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'TodoWidget',
@@ -24,9 +25,7 @@ export default {
     TodoFilters,
   },
   computed: {
-    todosCount() {
-      return this.$store.getters.allTodos.length
-    },
+    ...mapGetters(['allTodos']),
   },
 }
 </script>

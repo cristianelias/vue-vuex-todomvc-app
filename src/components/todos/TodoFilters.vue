@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'TodoFilters',
@@ -37,11 +37,9 @@ export default {
     ]),
   },
   computed: {
+    ...mapGetters(['activeTodos', 'filters']),
     activeTodosCount() {
-      return this.$store.getters.activeTodos.length
-    },
-    filters() {
-      return this.$store.getters.filters
+      return this.activeTodos.length
     },
   },
 }
